@@ -37,8 +37,8 @@
             text-transform: uppercase;
             cursor: pointer;
             font-size: 2em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 3D effect */
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4); /* Gradient text */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -53,7 +53,7 @@
         }
 
         .toggle:hover {
-            transform: scale(1.1); /* Slight 3D scale on hover */
+            transform: scale(1.1);
         }
 
         .toggle.active {
@@ -77,7 +77,7 @@
         }
 
         .showcase.active {
-            right: 300px; /* Slide effect for menu */
+            right: 300px;
         }
 
         .showcase video {
@@ -88,7 +88,7 @@
             height: 100%;
             object-fit: cover;
             opacity: 0.8;
-            filter: saturate(200%); /* Enhanced vibrancy */
+            filter: saturate(150%) brightness(120%); /* Enhanced vibrancy */
         }
 
         .overlay {
@@ -97,7 +97,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(255,107,107,0.3), rgba(78,205,196,0.3)); /* Gradient overlay */
+            background: linear-gradient(135deg, rgba(255,107,107,0.3), rgba(78,205,196,0.3));
             mix-blend-mode: overlay;
         }
 
@@ -105,14 +105,14 @@
         .text {
             position: relative;
             z-index: 10;
-            animation: fadeIn 1s ease-out forwards; /* Fade-in animation */
+            animation: fadeIn 1s ease-out forwards;
         }
 
         .text h2, .text h3 {
             font-weight: 800;
             color: #fff;
             text-transform: uppercase;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 3D effect */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .text h2 {
@@ -135,7 +135,7 @@
         .text a {
             display: inline-block;
             font-size: 1em;
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4); /* Gradient button */
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
             padding: 10px 30px;
             text-transform: uppercase;
             text-decoration: none;
@@ -148,24 +148,25 @@
 
         .text a:hover {
             letter-spacing: 6px;
-            transform: translateY(-5px); /* 3D lift on hover */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.4); /* Shadow for depth */
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
         }
 
         /* Social Links */
         .social {
             position: absolute;
-            z-index: 20; /* Ensure visibility above video */
+            z-index: 30; /* Above video and overlay */
             bottom: 20px;
+            left: 50px; /* Moved from edge */
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
         }
 
         .social li {
             list-style: none;
             margin-right: 20px;
-            animation: fadeIn 1s ease-out forwards; /* Staggered fade-in */
+            animation: fadeIn 1s ease-out forwards;
             opacity: 0;
         }
 
@@ -179,18 +180,19 @@
         }
 
         .social li a img {
-            width: 40px; /* Increased size for visibility */
-            height: 40px;
+            width: 50px; /* Larger size */
+            height: 50px;
             object-fit: contain;
-            background: rgba(255,255,255,0.3); /* Subtle background */
-            padding: 10px;
+            background: rgba(255, 255, 255, 0.8); /* Light background */
+            padding: 15px;
             border-radius: 50%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Shadow for depth */
             transition: all 0.3s ease;
         }
 
         .social li a:hover img {
-            transform: translateY(-10px); /* 3D lift on hover */
-            box-shadow: 0 5px 10px rgba(0,0,0,0.3); /* Shadow for depth */
+            transform: translateY(-10px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
         }
 
         /* Menu Styling */
@@ -204,7 +206,7 @@
             justify-content: center;
             align-items: center;
             background: #fff;
-            box-shadow: -5px 0 10px rgba(0,0,0,0.3); /* 3D shadow */
+            box-shadow: -5px 0 10px rgba(0,0,0,0.3);
         }
 
         .menu ul li {
@@ -236,7 +238,7 @@
         }
 
         .menu ul li a:hover::after {
-            width: 100%; /* Underline effect on hover */
+            width: 100%;
         }
 
         /* Animations */
@@ -252,6 +254,7 @@
             }
             .text h2 { font-size: 3em; }
             .text h3 { font-size: 2em; }
+            .social { left: 40px; }
         }
 
         @media (max-width: 576px) {
@@ -259,9 +262,8 @@
             .text h2 { font-size: 2em; }
             .text h3 { font-size: 1.5em; }
             .text p { font-size: 0.9em; }
-            .menu ul li a { font-size: 20px; }
-            .social li { margin-right: 15px; }
-            .social li a img { width: 30px; height: 30px; }
+            .social { left: 20px; }
+            .social li a img { width: 40px; height: 40px; }
         }
     </style>
 </head>
