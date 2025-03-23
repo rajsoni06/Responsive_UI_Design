@@ -175,19 +175,19 @@
         .social li:nth-child(3) { animation-delay: 0.8s; }
 
         .social li a {
-            display: inline-block;
-            background: rgb(255, 255, 255); /* Fully opaque white */
-            padding: 15px; /* Creates a circular button effect */
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.4); /* Stronger shadow for depth */
-            transition: all 0.3s ease;
-        }
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.9); /* Updated for contrast */
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Stronger shadow */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Added border */
+    transition: all 0.3s ease;
+}
 
-        .social li a img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-        }
+.social li a img {
+    width: 40px; /* Adjusted size */
+    height: 40px;
+}
 
         .social li a:hover {
             transform: translateY(-10px);
